@@ -1017,7 +1017,7 @@ img {
 }
 
 .menu {
-  background: url("../../img/bg/menu.png") 50% no-repeat;
+  background: url("../img/bg/menu.png") 50% no-repeat;
   background-size: cover;
   position: relative;
   color: #ffffff;
@@ -1129,7 +1129,7 @@ img {
 }
 
 .team {
-  background: url("../../img/bg/team.png") center center/cover no-repeat;
+  background: url("../img/bg/team.png") center center/cover no-repeat;
   color: #fff;
   position: relative;
 }
@@ -1447,7 +1447,7 @@ img {
 }
 
 .order {
-  background: url("../../img/bg/order.png") 50% no-repeat;
+  background: url("../img/bg/order.png") 50% no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -1653,13 +1653,13 @@ img {
 }
 
 .map {
-  background: url("../../img/bg/map.png") center center/cover no-repeat;
+  background: url("../img/bg/map.png") center center/cover no-repeat;
   color: #fff;
   position: relative;
 }
 
 .footer {
-  background: url("../../img/bg/footer.png") center bottom no-repeat;
+  background: url("../img/bg/footer.png") center bottom no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 0;
