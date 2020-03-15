@@ -37,7 +37,14 @@
   bottom: 0;
   opacity: 0;
   transform: 0.5;
-  padding: 100px 80px;
+  padding: rem(100px) rem(80px);
+  @include tablets {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .review__username {
@@ -45,16 +52,23 @@
   @include gagalin();
   font-size: 14px;
   font-weight: 400;
-  line-height: 28.11px;
+  line-height: rem(28px);
+  @include phones {
+    font-size: rem(20px);
+  }
 }
 
 .review__content {
-color: #ffffff;
-@include ubuntu();
-font-size: 14px;
-font-weight: 300;
-line-height: 24px;
-margin-bottom: 15px;
+  color: #ffffff;
+  @include ubuntu();
+  font-size: 14px;
+  font-weight: 300;
+  line-height: rem(24px);
+  margin-bottom: rem(15px);
+  
+  @include phones {
+    display: none;
+  }
 }
 
 

@@ -1,16 +1,35 @@
 .features {
   background: url("../img/bg/features.png") center center / cover no-repeat;
-  color: #fff;
-  position: relative;
   text-align: center;
+  display: flex;
+  align-items: center;
+  background-position: center center;
+  .section__title {
+    margin-bottom: rem(80px);
+    @include tablets {
+      margin-bottom: rem(40px);
+    }
+    
+  }
 }
 
 .features__list {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  @include phones() {
+    flex-direction: column;
+  }
 }
 
 .features__item {
   width: calc(100% / 3 - 26px);
+  margin-bottom: rem(50px);
+  padding: 0 rem(15px);
+  display: flex;
+  flex-direction: column;
+  @include phones {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: rem(25px);
+  }
 }

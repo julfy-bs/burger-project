@@ -1,11 +1,11 @@
 .feature__title {
-  color: #2f3234;
+  font-size: rem(24px);
   @include lifehack;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 28.14px;
-  flex: 20;
-  margin-bottom: 20px;
+  color: $black;
+  margin-bottom: rem(20px);
+  @include phones {
+    font-size: rem(20px);
+  }
 }
 
 
@@ -16,7 +16,10 @@
   @include ubuntu;
   font-size: 14px;
   font-weight: 300;
-  line-height: 24.02px;
+  line-height: rem(24px);
+  @include phones {
+    font-size: rem(14px);
+  }
 }
 
 .feature {
@@ -27,10 +30,34 @@
   display: flex;
   justify-content: center;
   flex: 40;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
+  @include phones {
+    margin-right: rem(20px);
+    width: 30%;
+  }
 }
 
 .feature__image-element {
-  padding-top: 10px;
+  padding-top: rem(10px);
   max-height: 100%;
 } 
+
+.feature__icon-pic {
+  width: 90%;
+  height: rem(100px);
+  svg {
+    max-width: 95%;
+  }
+  @include phones {
+    position: static;
+    transform: none;
+  }
+}
+
+.feature__content {
+  @include phones {
+    text-align: left;
+    display: block;
+    width: 65%;
+  }
+}

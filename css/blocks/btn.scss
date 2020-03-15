@@ -1,17 +1,14 @@
 .btn {
-  background: $orange;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 10px 30px;
-  margin-left: 15px;
-  @include ubuntu();
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 30px;
-  text-transform: uppercase;
-
+	@include inlineblock();
+	background: $orange;
+	font-size: rem(13px);
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	border-radius: rem(5px);
+	padding: rem(9px) rem(16px);
+	@include ubuntu(medium);
   &--black {
     background: #2f3234;
     margin: 0;
