@@ -1,0 +1,144 @@
+.slider-menu {
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  color: #ffffff;
+}
+
+.slider-menu__container {
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__item {
+  display: none;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.slider {
+  flex: 8;
+  padding-left: 5%;
+}
+
+.slider__item--active {
+  display: flex;
+  @include phones {
+    max-width: 300px;
+  }
+}
+
+.slider__left,
+.slider__right {
+  max-width: rem(500px);
+  flex-flow: column wrap;
+  flex: 1;
+}
+
+.slider__image {
+  max-width: 100%;
+  width: rem(500px);
+}
+
+.slider__left {
+  position: relative;
+}
+
+.burger-kkal__icon {
+  @include tablets {
+    position: absolute;
+    top: rem(5px);
+    left: rem(375px);
+  }
+}
+
+.scroll-btn-left,
+.scroll-btn-right {
+  display: flex;
+  flex-flow: row wrap;
+  width: rem(13px);
+  height: 100%;
+
+  @include phones {
+  }
+}
+
+.scroll-btn-left {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  height: 100%;
+}
+
+.burger__description {
+  @include ubuntu();
+  font-size: rem(14px);
+  line-height: rem(23.97px);
+  margin-bottom: rem(35px);
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    padding: rem(10px) rem(50px);
+  }
+}
+
+.burger__price {
+  display: inline;
+  color: #e35028;
+  @include gagalin();
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(28.08px);
+  margin-right: 50px;
+}
+
+.burger__price--currency {
+  letter-spacing: rem(0.75px);
+  font-size: rem(30px);
+}
+
+
+
+
+.weight {
+  margin-top: - rem(35px);
+  margin-left: rem(13px);
+  opacity: 0.5;
+  @include gagalin();
+  font-size: rem(20px);
+  line-height: rem(24px);
+  font-weight: 400;
+
+}
+
+.kkal {
+  font-size: rem(14px);
+}
+
+.scroll__left,
+.slider,
+.scroll__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-cell__info {
+  @include tablets {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.burger-composition {
+  @include @phones {
+    margin-left: rem(15px);
+    
+  }
+}

@@ -13,7 +13,7 @@
 
 
 .section__title {
-  font-size: 72px; 
+  font-size: rem(72px); 
   color: $yellow;
   margin-bottom: rem(50px);
   @include gagalin();
@@ -27,8 +27,22 @@
     color: $black;
   }
 
+  &--white {
+    color: #ffffff;
+  }
+
+  &--slider {
+    @include tablets {
+      text-align: center;
+    }
+  }
+
   @include tablets {
 		min-height: initial;
-    font-size: rem(45px);
-	}
+    // font-size: rem(45px);
+  }
+  
+  @include phones {
+    font-size: rem(24px);
+  }
 }
