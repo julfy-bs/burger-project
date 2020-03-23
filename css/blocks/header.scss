@@ -1,34 +1,72 @@
 .header {
   padding-top: rem(12px);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
-	@include laptop {
-		width: 15%;
-	}
+  @include laptop {
+    width: 15%;
+  }
 }
 
 .header__btns {
   display: flex;
   align-items: center;
   flex: 1;
-	text-align: right;
-	margin-right: rem(20px);
+  text-align: right;
+  margin-right: rem(20px);
 
-	@include laptop {
-		width: 85%;
-	}
+  @include laptop {
+    width: 85%;
+  }
 
-	@include tablets {
+  @include tablets {
     text-align: right;
     display: none;
-	}
+  }
 }
 
 .header__links {
   display: flex;
   align-items: center;
+}
+
+.nav__burger {
+  display: none;
+}
+
+.hamburger-menu-items-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+
+  .nav__item {
+    @include ubuntu();
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+      margin: 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .nav__link {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }

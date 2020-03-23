@@ -1,12 +1,17 @@
-var burgerMenuLink = document.querySelector('.hamburger-menu-link');
-var burgerMenu = document.querySelector('#hamburger-menu');
-var computed = getComputedStyle(burgerMenu)
+var burgerMenu = document.getElementById('hamburger-menu-link');
+var burgerMenuClose = document.getElementById('hamburger-menu__close');
+var burgerMenuItems = document.getElementById('nav-items');
 
-burgerMenuLink.addEventListener('keydown', function (e) {
+burgerMenu.addEventListener('click', function (e) {
+  console.log(e)
   e.preventDefault();
-  let burgerMenuDisplayed = (computed.burgerMenu);
-  if (!burgerMenuDisplayed) {
-    burgerMenuDisplayed = 0
-  }
+  e.target.classList.add('hamburger-menu-link-active')
+  burgerMenuItems.classList.add('hamburger-menu-items-active')
 });
 
+burgerMenuClose.addEventListener('click', function (e) {
+  console.log(e)
+  e.preventDefault();
+  burgerMenu.classList.remove('hamburger-menu-link-active')
+  burgerMenuItems.classList.remove('hamburger-menu-items-active')
+});

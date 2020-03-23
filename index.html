@@ -46,21 +46,59 @@
               </ul>
             </nav>
           </div>
-          <div class="header__links"><a class="order-link btn" href="" data-scroll-to="6">Заказать</a><a
-              class="hamburger-menu-link" href="">
-              <div class="hamburger-menu-link__bars"></div>
-            </a></div>
-        </header>
-        <div class="hero__content">
-          <div class="hero__image">
-            <img src="./img/content/hero__image.png" alt="" class="hero__image-element">
+          <div class="header__links"><a class="order-link btn" href="" data-scroll-to="6">Заказать</a>
+            <div id="hamburger-menu-link">
+              <a class="hamburger-menu-link" href="">
+                <div class="hamburger-menu-link__bars"></div>
+              </a>
+              <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger-menu__logo">
+                  <a class="logo" href="#"><img src="./img/icons/logo.svg">
+                  </a>
+                </div>
+                <a class="hamburger-menu__close" id="hamburger-menu__close" href="#">
+                  <svg class="hamburger-menu-close-icon">
+                    <use xlink:href="./img/sprite/sprite.svg#close"></use>
+                  </svg>
+                </a>
+                <ul class="nav__burger" id="nav-items">
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="1">о нас</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="2">бургеры</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="3">команда</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="4">меню</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="5">отзывы</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">как мы работаем</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="7">контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="hero__text">
-            <h1 class="section__title">Мы делаем</h1>
-            <h3 class="hero__desc">натуральные бургеры</h3>
-          </div>
+      </div>
+      </header>
+      <div class="hero__content">
+        <div class="hero__image">
+          <img src="./img/content/hero__image.png" alt="" class="hero__image-element">
+        </div>
+        <div class="hero__text">
+          <h1 class="section__title">Мы делаем</h1>
+          <h3 class="hero__desc">натуральные бургеры</h3>
         </div>
       </div>
+
       <a class="down-arrow" href="#" data-scroll-to="1">
         <svg class="down-arrow__icon">
           <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
@@ -133,7 +171,7 @@
           <li class="slider__item slider__item--active">
             <div class="slider__left">
               <a href="" class="burger-composition">
-                <img src="./img/bg/composition-3layers.png" alt="" class="burger-composition">
+                <img src="./img/bg/composition-3layers.png" alt="" class="burger-composition__icon">
                 </svg>
                 <div class="burger-composition__hover burger-composition__hover--active">
                   <ul class="hover__list">
@@ -566,31 +604,6 @@
       </section>
 
     </section>
-  </div>
-  <!-- Гамбургер меню -->
-  <div class="hamburger-menu" id="hamburger-menu">
-    <div class="hamburger-menu__logo"><a class="logo" href="#"><img src="./img/icons/logo.svg"></a></div>
-    <div class="hamburger-menu__items">
-      <nav class="nav nav_hamburger">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="" data-scroll-to="1">о нас</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="" data-scroll-to="2">бургеры</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="" data-scroll-to="3">команда</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="" data-scroll-to="4">меню</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="" data-scroll-to="5">отзывы</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="" data-scroll-to="7">контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </div><a class="hamburger-menu__close" href="#">
-      <svg class="hamburger-menu__close-icon">
-        <use xlink:href="./img/sprite/sprite.svg#close"></use>
-      </svg></a>
   </div>
   <script src="main.js"></script>
 </body>

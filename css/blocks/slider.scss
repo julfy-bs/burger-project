@@ -26,6 +26,7 @@
 
 .slider__item--active {
   display: flex;
+
   @include phones {
     max-width: 300px;
   }
@@ -40,11 +41,15 @@
 
 .slider__image {
   max-width: 100%;
-  width: rem(500px);
+  @include phones {
+
+  }
 }
 
 .slider__left {
   position: relative;
+
+  @include phones {}
 }
 
 .burger-kkal__icon {
@@ -52,6 +57,13 @@
     position: absolute;
     top: rem(5px);
     left: rem(375px);
+  }
+
+  
+  @include phones {
+    display: flex;
+    left: rem(270px);
+
   }
 }
 
@@ -62,8 +74,7 @@
   width: rem(13px);
   height: 100%;
 
-  @include phones {
-  }
+  @include phones {}
 }
 
 .scroll-btn-left {
@@ -79,6 +90,7 @@
   font-size: rem(14px);
   line-height: rem(23.97px);
   margin-bottom: rem(35px);
+
   @include tablets {
     text-align: center;
   }
@@ -96,6 +108,10 @@
   font-weight: 400;
   line-height: rem(28.08px);
   margin-right: 50px;
+  
+  @include phones {
+    font-size: rem(50px);
+  }
 }
 
 .burger__price--currency {
@@ -117,10 +133,6 @@
 
 }
 
-.kkal {
-  font-size: rem(14px);
-}
-
 .scroll__left,
 .slider,
 .scroll__right {
@@ -129,6 +141,7 @@
 }
 
 .burger-cell__info {
+  display: flex;
   @include tablets {
     text-align: center;
     align-items: center;
@@ -136,8 +149,11 @@
 }
 
 .burger-composition {
-  @include @phones {
+  position: relative;
+  display: inline-block;
+
+  @include phones {
     margin-left: rem(15px);
-    
+
   }
 }
