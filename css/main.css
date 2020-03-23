@@ -564,6 +564,50 @@ img {
   max-width: 100%;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  min-height: 40.625rem;
+}
+.section--align--top {
+  justify-content: flex-start;
+}
+
+.section__title {
+  font-size: 4.5rem;
+  color: #f9b43b;
+  margin-bottom: 3.125rem;
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  line-height: 1;
+}
+.section__title--centered {
+  text-align: center;
+}
+.section__title--color--black {
+  color: #2f3234;
+}
+.section__title--white {
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .section__title--slider {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section__title {
+    min-height: initial;
+    margin-bottom: 1.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
 .header {
   padding-top: 0.75rem;
   display: flex;
@@ -640,9 +684,11 @@ img {
   background: url("../img/bg/hero.png") center center/cover no-repeat;
   color: #fff;
   position: relative;
+  justify-content: start;
 }
 @media screen and (max-width: 768px) {
   .hero {
+    justify-content: space-between;
     padding-bottom: 9.375rem;
   }
 }
@@ -654,10 +700,8 @@ img {
 
 .hero__container {
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 15%;
 }
 
 .hero__desc {
@@ -776,50 +820,6 @@ img {
   height: 2.5rem;
   transition: 0.3s;
   fill: #fff;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  min-height: 40.625rem;
-}
-.section--align--top {
-  justify-content: flex-start;
-}
-
-.section__title {
-  font-size: 4.5rem;
-  color: #f9b43b;
-  margin-bottom: 3.125rem;
-  font-family: "Gagalin-Regular", Helvetica, sans-serif;
-  line-height: 1;
-}
-.section__title--centered {
-  text-align: center;
-}
-.section__title--color--black {
-  color: #2f3234;
-}
-.section__title--white {
-  color: #ffffff;
-}
-@media screen and (max-width: 768px) {
-  .section__title--slider {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section__title {
-    min-height: initial;
-    margin-bottom: 1.25rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section__title {
-    font-size: 1.5rem;
-  }
 }
 
 .btn {

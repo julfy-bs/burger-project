@@ -2,7 +2,9 @@
   background: url("../img/bg/hero.png") center center / cover no-repeat;
   color: #fff;
   position: relative;
+  justify-content: start;
   @include tablets {
+    justify-content: space-between;
     padding-bottom: rem(150px);
   }
   @include phones {
@@ -12,10 +14,10 @@
 
 .hero__container {
   display: flex;
-  flex: 1;
+  // flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 15%;
+  // padding-bottom: 15%;
 }
 
 .hero__desc {
