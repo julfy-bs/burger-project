@@ -5,6 +5,7 @@ var burgerMenuItems = document.getElementById('nav-items');
 burgerMenu.addEventListener('click', function (e) {
   console.log(e)
   e.preventDefault();
+  e.stopPropagation();
   burgerMenu.classList.add('hamburger-menu-link-active')
   burgerMenuItems.classList.add('hamburger-menu-items-active')
 });
@@ -12,6 +13,7 @@ burgerMenu.addEventListener('click', function (e) {
 burgerMenuClose.addEventListener('click', function (e) {
   console.log(e)
   e.preventDefault();
+  e.stopPropagation();
   burgerMenu.classList.remove('hamburger-menu-link-active')
   burgerMenuItems.classList.remove('hamburger-menu-items-active')
 });

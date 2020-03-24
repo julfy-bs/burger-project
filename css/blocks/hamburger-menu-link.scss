@@ -64,19 +64,29 @@
 
     .hamburger-menu__logo {
       position: absolute;
-      top: rem(10px);
-      left: rem(30px);
+      top: rem(13px);
+      left: rem(22px);
       display: block;
+
+      @include phones {
+        top: rem(65px);
+        left: rem(15px);
+      }
     }
 
     .hamburger-menu__close {
       position: absolute;
-      right: rem(15px);
-      top: rem(15px);
+      right: rem(40px);
+      top: rem(30px);
       width: rem(18px);
       height: rem(18px);
       padding: rem(15px);
       box-sizing: content-box;
+
+      @include phones {
+        top: rem(85px);
+        right: rem(30px);
+      }
 
       &:hover {
         .hamburger-menu__close-icon {
@@ -99,6 +109,7 @@
           transition: fill .3s;
         }
       }
+      
     }
   }
 }

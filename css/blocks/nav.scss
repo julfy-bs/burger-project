@@ -3,6 +3,8 @@ $itemsMargin: rem(25px);
 .nav__list {
   display: flex;
   align-items: center;
+  margin-left: rem(100px);
+  flex-flow: wrap;
 }
 
 .nav__item {
@@ -33,5 +35,7 @@ $itemsMargin: rem(25px);
   margin-left: $itemsMargin;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: rem(30px);
 }

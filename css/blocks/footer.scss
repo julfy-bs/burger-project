@@ -13,7 +13,7 @@
   flex-direction: row;
   align-items: center;
 
-  @include phones {
+	@include phones {
     flex-direction: column;
   }
 }
