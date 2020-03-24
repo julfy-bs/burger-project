@@ -1,11 +1,11 @@
 var burgerMenu = document.getElementById('hamburger-menu-link');
-var burgerMenuClose = document.getElementById('hamburger-menu__close');
+var burgerMenuClose = document.getElementById('hamburger-menu-close');
 var burgerMenuItems = document.getElementById('nav-items');
 
 burgerMenu.addEventListener('click', function (e) {
   console.log(e)
   e.preventDefault();
-  e.target.classList.add('hamburger-menu-link-active')
+  burgerMenu.classList.add('hamburger-menu-link-active')
   burgerMenuItems.classList.add('hamburger-menu-items-active')
 });
 
