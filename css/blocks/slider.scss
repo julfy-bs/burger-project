@@ -12,8 +12,8 @@
 
 .slider__item {
   display: none;
-
-  @include tablets {
+  
+    @include tablets {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -137,7 +137,7 @@
 .slider,
 .scroll__right {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .burger-cell__info {

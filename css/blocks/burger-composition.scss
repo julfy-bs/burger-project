@@ -6,7 +6,11 @@
   max-width: rem(550px);  
   padding: rem(12px) rem(31px);
   display: none;
-  &--active {
+  
+}
+
+.burger-composition:hover {
+  .burger-composition__hover {
     display: inline-block;
     position: absolute;
     top: 0;

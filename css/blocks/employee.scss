@@ -45,6 +45,7 @@
 	position: relative;
 	display: block;
 	margin-bottom: rem(20px);
+	margin-left: 20px;
 
 	&:before, &:after {
 		content: "";
@@ -97,9 +98,12 @@
 	}
 }
 
-.employee__info--displayed {
-  display: table;
+.employee-active {
+	.employee__info {
+		display: table;
+	}
 }
+
 
 .employee_image {
 	text-align: center;
