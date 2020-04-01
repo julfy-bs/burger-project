@@ -1299,7 +1299,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .menu__link--trigger {
-    width: 6.5rem;
+    width: 7.7375rem;
   }
 }
 @media screen and (max-width: 480px) {
