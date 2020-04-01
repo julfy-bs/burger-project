@@ -1,18 +1,14 @@
-const accordion = document.querySelector('.team__list')
-const item = accordion.querySelector('.employee');
-const name = item.querySelector('.employee__name');
-const employeeLink = name.querySelector('.employee__link');
-
-employeeLink.addEventListener('click', function(e) {
-  console.log(e)
-  e.preventDefault();
-})
-
-item.addEventListener('click', function(e) {
-  e.preventDefault();
-  if (item.classList.contains('employee-active')) {
-    item.classList.remove('employee-active');
-  } else {
-    item.classList.add('employee-active');
-  }
-})
+const employeeLink = document.querySelectorAll('.employee__link');
+let arrayEmployeeLink = [...employeeLink];
+arrayEmployeeLink.map((item) => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    let wrap = item.closest('.team__list').querySelector('.employee-active')
+    if (wrap) {
+      item.closest('.employee').classList.add('employee-active');
+      wrap.classList.remove('employee-active')
+    } else {
+      item.closest('.employee').classList.add('employee-active');
+    }
+  })
+});

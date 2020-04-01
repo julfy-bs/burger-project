@@ -24,16 +24,17 @@ sendButton.addEventListener('click', function (event) {
       const overlay = createOverlay(template);
 
       sendButton.addEventListener("click", function () {
-        overlay.open();
-        if (xhr.response < 400) {
+        if (xhr.response !== 200) {
+          overlay.open();
           overlay.setContent("Спасибо за заказ, Ваш заказ получен! Наш оператор свяжется с Вами в ближайшее время!");
         } else {
-          overlay.setContent("Ууупс, что-то пошло не так!");
+          overlay.open();
+          overlay.setContent(xhr.response.message);
         }
 
       });
 
-      function createOverlay(template) {
+      function createOverlay(template) {  
         const fragment = document.createElement('div');
 
         fragment.innerHTML = template;
@@ -49,11 +50,15 @@ sendButton.addEventListener('click', function (event) {
         });
         closeElement.addEventListener("click", () => {
           document.body.removeChild(overlayElement);
+          overlayElement.style.display = "none";
+          document.body.style.overflow = 'auto'
         });
 
         return {
           open() {
             document.body.appendChild(overlayElement);
+            overlayElement.style.display = "block";
+            document.body.style.overflow = 'hidden'
           },
           close() {
             closeElement.click();

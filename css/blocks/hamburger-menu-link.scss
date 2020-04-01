@@ -113,3 +113,12 @@
     }
   }
 }
+
+.hamburger-menu-items-active {
+  .nav__item {
+    .nav__link {
+      font-size: rem(30px);
+      line-height: rem(80px);
+    }
+  }
+}

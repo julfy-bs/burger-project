@@ -14,7 +14,8 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    left: rem(110px);
+    right: -300px;
+    min-width: 300px;
     max-width: 350px;
     @include phones {
       padding: rem(12px) rem(31px);

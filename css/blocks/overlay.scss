@@ -13,6 +13,9 @@
 
 .overlay__container {
   position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
 }
 
 .overlay__content {
@@ -22,17 +25,19 @@
   color: #fff;
   margin: 0;
   text-align: center;
+  height: rem(100px);
+  width: rem(400px);
 }
 
 .overlay__close {
   color: #fff;
   position: absolute;
-  right: -5px;
+  right: 25%;
   top: -10px;
   background: #d00;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
