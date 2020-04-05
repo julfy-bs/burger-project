@@ -578,6 +578,7 @@ img {
   font-size: 4.5rem;
   color: #f9b43b;
   margin-bottom: 3.125rem;
+  text-transform: uppercase;
   font-family: "Gagalin-Regular", Helvetica, sans-serif;
   line-height: 1;
 }
@@ -2085,5 +2086,34 @@ img {
   line-height: 20px;
   text-align: center;
   text-decoration: none;
+}
+
+.player-section {
+  background: url("../../img/bg/player-bg.png") center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+.player-section__container {
+  min-height: 23.125rem;
+  min-width: 41.25rem;
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../img/content/player/player.png");
+  cursor: pointer;
+  z-index: 100;
 }
 /*# sourceMappingURL=main.css.map */
