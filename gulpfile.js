@@ -32,6 +32,12 @@ task('copy:html', () => {
    .pipe(dest(DIST_PATH))
    .pipe(reload({ stream: true }));
 })
+
+task('copy:img', () => {
+  return src(`${SRC_PATH}/**/**/*.png`)
+    .pipe(dest(DIST_PATH))
+    .pipe(reload({ stream: true }));
+ })
  
 task('styles', () => {
  return src([...STYLE_LIBS, 'src/styles/main.scss'])
@@ -110,7 +116,7 @@ task('watch', () => {
 task('default',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'),
+   parallel('copy:html', 'copy:img', 'styles', 'scripts', 'icons'),
    parallel('watch', 'server')
  )
 );
@@ -118,5 +124,5 @@ task('default',
 task('build',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'))
+   parallel('copy:html', 'copy:img', 'styles', 'scripts', 'icons'))
 );
