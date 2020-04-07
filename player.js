@@ -1,4 +1,40 @@
 let player;
+const playerContainer = $('.player');
+
+// Функция запуска видео по тегу .player .paused
+
+let eventsInit = () => {
+  $('.player__start').click(e => {
+    e.preventDefault();
+    if (playerContainer.hasClass('paused')) {
+      playerContainer.removeClass("paused");
+      player.pauseVideo();
+    } else {
+      playerContainer.addClass("paused");
+      player.playVideo()
+    }
+  });
+
+  $(".player__playback").click(e => {
+    const bar = $(e.currentTarget);
+    const clickedPosition = e.originalEvent.layerX;
+    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+    const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+
+    $(".player__playback-button").css({
+      left: `${newButtonPositionPercent}`
+    });
+
+    player.seekTo(newPlaybackPositionSec);
+
+  });
+
+  $(".player__splash").click(e => {
+    player.playVideo();
+  });
+}
+
+// Функция перевода времени из секундного формата в обычный формат 00:00
 
 const formatTime = timeSec => {
   const roundTime = Math.round(timeSec);
@@ -11,13 +47,17 @@ const formatTime = timeSec => {
   return `${minutes}:${formattedSeconds}`;
 };
 
+// Функция отображения времени в .player__duration-completed и
+// в .player__duration-estimate, .player__playback полоса длительности просмотра 
+// видео в % соотношении
+
 const onPlayerReady = () => {
   let interval;
-  let durationSec = player.getDuration();
+  const durationSec = player.getDuration();
 
   $(".player__duration-estimate").text(formatTime(durationSec));
 
-  if (typeof interval !== "undefined") {
+  if (typeof interval !== 'undefined') {
     clearInterval(interval);
   }
 
@@ -27,44 +67,12 @@ const onPlayerReady = () => {
 
     $(".player__playback-button").css({
       left: `${completedPercent}%`
-    });
-
+    })
     $(".player__duration-completed").text(formatTime(completedSec));
   }, 1000);
-};
-
-const eventsInit = () => {
-  $(".player__start").on("click", e => {
-    e.preventDefault();
-    const btn = $(e.currentTarget);
-
-    if (btn.hasClass("paused")) {
-      player.pauseVideo();
-    } else {
-      player.playVideo();
-    }
-  });
-
-  $(".player__playback").on("click", e => {
-    const bar = $(e.currentTarget);
-    const newButtonPosition = e.pageX - bar.offset().left;
-    const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
-    const newPlayerTimeSec = (player.getDuration() / 100) * buttonPosPercent;
-
-    $(".player__playback-button").css({
-      left: `${buttonPosPercent}%`
-    });
-
-    player.seekTo(newPlayerTimeSec);
-  });
-
-  $(".player__splash").on("click", e => {
-    player.playVideo();
-  });
-};
+}
 
 const onPlayerStateChange = event => {
-  const playerButton = $(".player__start");
   /*
   -1 (воспроизведение видео не начато)
   0 (воспроизведение видео завершено)
@@ -72,26 +80,29 @@ const onPlayerStateChange = event => {
   2 (пауза)
   3 (буферизация)
   5 (видео подают реплики).
-   */
+  */
   switch (event.data) {
-    case 1: 
-      $('.player__wrapper').addClass('active');
-      playerButton.addClass("paused");
+    case 1:
+      playerContainer.addClass('active');
+      playerContainer.addClass("paused");
       break;
-    case 2: 
-      playerButton.removeClass("paused");
+    case 2:
+      playerContainer.removeClass("active");
+      playerContainer.removeClass("paused");
       break;
   }
-};
+}
+
+// YouTubeIframeAPI - менеджмент
 
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player("youtube-player", {
-    height: "405",
-    width: "660",
-    videoId: "jK3d-5X9vgc",
+  player = new YT.Player('youtube-player', {
+    height: '370',
+    width: '660',
+    videoId: 'CsCednu9VjA',
     events: {
-      onReady: onPlayerReady,
-      onStateChange: onPlayerStateChange
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
     },
     playerVars: {
       controls: 0,
