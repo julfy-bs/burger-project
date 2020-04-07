@@ -2136,11 +2136,6 @@ img {
   align-items: center;
 }
 
-.player-section__container {
-  height: 23.125rem;
-  width: 41.25rem;
-}
-
 .player__splash {
   content: "";
   position: absolute;
@@ -2148,7 +2143,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/../img/content/player/player.png") center center/cover no-repeat;
+  background: url("../img/content/player/player.png") center center/cover no-repeat;
   cursor: pointer;
 }
 
