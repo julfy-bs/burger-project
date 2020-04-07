@@ -2128,7 +2128,7 @@ img {
 }
 
 .player-section {
-  background: url("../../img/bg/player-bg.png") center center/cover no-repeat;
+  background: url("../img/bg/player-bg.png") center center/cover no-repeat;
   display: flex;
   align-items: center;
 }
@@ -2148,7 +2148,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../../img/content/player/player.png") center center/cover no-repeat;
+  background: url("/../img/content/player/player.png") center center/cover no-repeat;
   cursor: pointer;
 }
 
