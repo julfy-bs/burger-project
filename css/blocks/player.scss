@@ -1,8 +1,10 @@
 .player {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
+  max-width: 660px;
+  max-height: 370px;
+  width: 60vw;
+  height: 37vw;
 
   &.hidden {
     opacity: 0;
@@ -46,6 +48,13 @@
     }
   }
 
+  @include tablets {
+    max-width: 595px;
+    max-height: 362px;
+
+    width: 78vw;
+    height: 48vw;
+  }
 }
 
 .player-section {
