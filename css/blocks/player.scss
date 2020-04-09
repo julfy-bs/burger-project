@@ -3,9 +3,7 @@
   display: block;
   max-width: 660px;
   max-height: 370px;
-  width: 60vw;
-  height: 37vw;
-
+  
   &.hidden {
     opacity: 0;
     transition: opacity 0.3s;
@@ -46,14 +44,6 @@
         }
       }
     }
-  }
-
-  @include tablets {
-    max-width: 595px;
-    max-height: 362px;
-
-    width: 78vw;
-    height: 48vw;
   }
 }
 
@@ -128,7 +118,7 @@
   }
 
   @include phones {
-    width: rem(200px);
+    width: rem(120px);
 
   }
 }
