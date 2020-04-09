@@ -94,10 +94,11 @@ const onPlayerStateChange = event => {
 }
 
 // YouTubeIframeAPI - менеджмент
-
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('youtube-player', {
+  let clientWidth = document.documentElement.clientWidth;
 
+  player = new YT.Player('youtube-player', {
+    width: clientWidth / 1.5,
     videoId: 'CsCednu9VjA',
     events: {
       'onReady': onPlayerReady,
